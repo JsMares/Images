@@ -50,6 +50,11 @@ class MainActivity : AppCompatActivity() {
             text = convertBitmapToString(getBitmap())
             Toast.makeText(applicationContext, text, Toast.LENGTH_LONG).show()
         }
+
+        binding.btnToBitmap.setOnClickListener {
+            val image = convertStringToBitmap(text)
+            binding.imgViewSecond.setImageBitmap(image)
+        }
     }
 
     private val openCamera =
@@ -79,6 +84,12 @@ class MainActivity : AppCompatActivity() {
         val byteArray = outputStream.toByteArray()
 
         return Base64.encodeToString(byteArray, Base64.DEFAULT)
+    }
+
+    private fun convertStringToBitmap(bitmapString: String?): Bitmap? {
+        val decodeBytes = Base64.decode(bitmapString, Base64.DEFAULT)
+
+        return BitmapFactory.decodeByteArray(decodeBytes, 0, decodeBytes.size)
     }
 
     /*private suspend fun convertBitmapToString(bitmap: Bitmap?): String? {

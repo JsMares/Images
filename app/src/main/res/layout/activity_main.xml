@@ -10,9 +10,9 @@
         android:id="@+id/imgView"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgView"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.079" />
 
     <Button
         android:id="@+id/btnGallery"
@@ -40,17 +40,39 @@
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toEndOf="@+id/btnCamera"
         app:layout_constraintTop_toBottomOf="@+id/imgView"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.102" />
 
     <Button
         android:id="@+id/btnToString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="28dp"
         android:text="Convertir a Texto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCamera"
-        app:layout_constraintVertical_bias="0.271" />
+        app:layout_constraintVertical_bias="0.116" />
+
+    <Button
+        android:id="@+id/btnToBitmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Convertir a Bitmap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toEndOf="@+id/btnToString"
+        app:layout_constraintTop_toBottomOf="@+id/btnGallery" />
+
+    <ImageView
+        android:id="@+id/imgViewSecond"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
